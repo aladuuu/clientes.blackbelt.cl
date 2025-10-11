@@ -19,7 +19,7 @@ cd nuevos-idiomas && \
 git clone https://github.com/aladuuu/clientes.blackbelt.cl.git && \
 chmod +x clientes.blackbelt.cl/aplicar_idioma.sh && \
 cd .. && \
-./nuevos-idiomas/clientes.blackbelt.cl/aplicar_idioma.sh --yes
+./nuevos-idiomas/clientes.blackbelt.cl/aplicar_idioma.sh
 ```
 
 Este comando ejecuta la siguiente secuencia:
