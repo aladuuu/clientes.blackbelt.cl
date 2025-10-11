@@ -1,40 +1,45 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Este script SIEMPRE vive en BASE_DIR/nuevos-idiomas
-SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd -P)"
-if [[ "$(basename -- "$SCRIPT_DIR")" != "nuevos-idiomas" ]]; then
-  echo "Error: este script debe estar en BASE_DIR/nuevos-idiomas" >&2
-  exit 2
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+BASE_DIR=$(cd -- "$SCRIPT_DIR/../.." && pwd)
+LANG_DIR="$BASE_DIR/language/es_es"
+NEW_LANG_DIR="$SCRIPT_DIR/language/es_es"
+CACHE_DIR="$BASE_DIR/cache"
+BACKUP_DIR="$BASE_DIR/language/backup_$(date +%Y%m%d_%H%M%S)"
+
+if [[ ! -f "$BASE_DIR/config/blesta.php" ]]; then
+    echo "Error: No se detecta una instalación de Blesta en '$BASE_DIR'" >&2
+    exit 1
 fi
 
-BASE_DIR="$(cd -P -- "$SCRIPT_DIR/.." && pwd -P)"
-REPO_URL="https://github.com/aladuuu/clientes.blackbelt.cl.git"
-STAGE="$SCRIPT_DIR/.origen"
-
-# Validaciones mínimas
-[[ -f "$BASE_DIR/config/blesta.php" ]] || { echo "Error: BASE_DIR no parece una instalación de Blesta ($BASE_DIR)." >&2; exit 1; }
-command -v git >/dev/null 2>&1 || { echo "Error: git no está instalado." >&2; exit 1; }
-
-# Clonar repo espejo dentro de 'nuevos-idiomas' (subcarpeta oculta)
-rm -rf -- "$STAGE"
-git clone --depth 1 "$REPO_URL" "$STAGE"
-
-# Prechequeo: NO crear directorios nuevos; si falta alguno, abortar
-while IFS= read -r -d '' src; do
-  rel="${src#"$STAGE/"}"
-  dest_dir="$(dirname -- "$BASE_DIR/$rel")"
-  if [[ ! -d "$dest_dir" ]]; then
-    echo "Cambio en la estructura, revisa archivos." >&2
+if [[ ! -d "$LANG_DIR" ]]; then
+    echo "Error: Directorio de idiomas no encontrado en '$LANG_DIR'" >&2
     exit 1
-  fi
-done < <(find "$STAGE" -type f -not -path '*/.git/*' -print0)
+fi
 
-# Copiar UNO A UNO, sobrescribiendo si existe; crear el archivo si no existe (sin crear directorios)
-while IFS= read -r -d '' src; do
-  rel="${src#"$STAGE/"}"
-  dest="$BASE_DIR/$rel"
-  cp -p -- "$src" "$dest"
-done < <(find "$STAGE" -type f -not -path '*/.git/*' -print0)
+if [[ ! -d "$NEW_LANG_DIR" ]]; then
+    echo "Error: Directorio de nuevos archivos de idioma no encontrado en '$NEW_LANG_DIR'" >&2
+    exit 1
+fi
 
-echo "Aplicación completada desde '$STAGE' a '$BASE_DIR'."
+echo "Base de instalación: $BASE_DIR"
+echo "Creando copia de seguridad en '$BACKUP_DIR'..."
+mkdir -p "$BACKUP_DIR"
+cp -a "$LANG_DIR/." "$BACKUP_DIR/"
+echo "Backup creado."
+
+echo "Aplicando cambios de idioma..."
+cp -a "$NEW_LANG_DIR/." "$LANG_DIR/"
+echo "Archivos de idioma actualizados."
+
+if [[ -d "$CACHE_DIR" ]]; then
+    echo "Limpiando caché en '$CACHE_DIR'..."
+    find "$CACHE_DIR" -mindepth 1 -maxdepth 1 -exec rm -rf {} +
+    echo "Caché limpia."
+else
+    echo "Directorio de caché no encontrado; se omite la limpieza."
+fi
+
+echo "¡Cambios aplicados exitosamente!"
+echo "Si necesitas revertir los cambios, los archivos originales están en: $BACKUP_DIR"

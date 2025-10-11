@@ -13,13 +13,7 @@ Para facilitar la aplicación de los cambios, se incluye un script de automatiza
 ### Comando de Ejemplo
 
 ```bash
-# Comando todo-en-uno para actualizar idiomas
-mkdir -p nuevos-idiomas && \
-cd nuevos-idiomas && \
-git clone https://github.com/aladuuu/clientes.blackbelt.cl.git && \
-chmod +x clientes.blackbelt.cl/aplicar_idioma.sh && \
-cd .. && \
-./nuevos-idiomas/clientes.blackbelt.cl/aplicar_idioma.sh
+mkdir -p customizacion && cd customizacion && git clone https://github.com/aladuuu/clientes.blackbelt.cl.git && chmod +x clientes.blackbelt.cl/aplicar_idioma.sh && sh clientes.blackbelt.cl/aplicar_idioma.sh
 ```
 
 Este comando ejecuta la siguiente secuencia:
