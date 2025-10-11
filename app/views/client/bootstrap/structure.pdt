@@ -43,6 +43,8 @@ $html_lang = (!empty($language) ? substr($language, 0, 2) : 'en');
         <?php
         }
         ?>
+        <!-- Dark theme overrides -->
+        <link href="<?php echo $this->view_dir;?>css/dark.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="<?php echo $this->view_dir;?>css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo $this->view_dir;?>css/font-awesome-shims.min.css" rel="stylesheet" type="text/css" />
 
