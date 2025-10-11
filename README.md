@@ -72,9 +72,9 @@ Para facilitar la aplicación de los cambios de idioma, se incluye un script de 
 mkdir -p nuevos-idiomas && \
 cd nuevos-idiomas && \
 git clone https://github.com/aladuuu/clientes.blackbelt.cl.git && \
-chmod +x clientes.blackbelt.cl/aplicar_idioma.sh --yes && \
+chmod +x clientes.blackbelt.cl/aplicar_idioma.sh && \
 cd .. && \
-./nuevos-idiomas/clientes.blackbelt.cl/aplicar_idioma.sh
+./nuevos-idiomas/clientes.blackbelt.cl/aplicar_idioma.sh --yes
 ```
 
 Este comando ejecuta la siguiente secuencia:
