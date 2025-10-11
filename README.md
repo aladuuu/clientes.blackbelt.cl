@@ -18,11 +18,11 @@ mkdir -p customizacion && cd customizacion && git clone https://github.com/aladu
 
 Este comando ejecuta la siguiente secuencia:
 
-1. Crea una carpeta temporal `nuevos-idiomas`
+1. Crea una carpeta temporal `customizacion`
 2. Entra a la carpeta temporal
 3. Clona el repositorio dentro de ella
-4. Vuelve al directorio raíz
-5. Ejecuta el script que realizará:
+4. Entra a la carpeta del repositorio
+5. Ejecuta el script `aplicar_idioma.sh` que realizará:
    - Backup de archivos existentes
    - Reemplazo directo de archivos de idioma
    - Limpieza de caché
@@ -33,18 +33,3 @@ El script detectará automáticamente:
 - La estructura de carpetas necesaria
 - Los archivos a reemplazar
 - La ubicación correcta para el backup
-
-Estructura de directorios:
-
-```plaintext
-/directorio-raiz/           # Directorio actual
-├── language/              # Carpetas originales
-│   └── es_es/
-├── nuevos-idiomas/       # Carpeta temporal
-│   └── clientes.blackbelt.cl/
-│       └── language/
-│           └── es_es/
-└── cache/                # Caché de Blesta
-```
-
-Nota: Asegúrate de modificar las rutas según tu instalación de Blesta.
