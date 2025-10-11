@@ -105,7 +105,7 @@ echo "Si necesitas revertir los cambios, los archivos originales están en: $BAC
 mkdir -p nuevos-idiomas && \
 cd nuevos-idiomas && \
 git clone https://github.com/aladuuu/clientes.blackbelt.cl.git && \
-chmod +x clientes.blackbelt.cl/aplicar_idioma.sh && \
+chmod +x clientes.blackbelt.cl/aplicar_idioma.sh --yes && \
 cd .. && \
 ./nuevos-idiomas/clientes.blackbelt.cl/aplicar_idioma.sh
 ```
