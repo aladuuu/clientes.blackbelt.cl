@@ -167,6 +167,7 @@ a.list-group-item:focus {
     background-color: #2a2a3e !important;
     transform: translateX(4px);
     box-shadow: inset 3px 0 0 #8b5cf6;
+    color: gray !important;
 }
 
 a.list-group-item.active,
@@ -174,6 +175,7 @@ a.list-group-item.active:hover,
 a.list-group-item.active:focus {
     background-color: #2a2a3e !important;
     box-shadow: inset 3px 0 0 #8b5cf6;
+    color: gray !important;
 }
 
 .table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
@@ -472,9 +474,9 @@ a.list-group-item.active:focus {
 }
 
 .alert-info {
-    color: #cffafe;
-    background: #164e63;
-    border-color: #0e7490;
+    color: #373838;
+    background: #cdd1d2;
+    border-color: #8006ae;
 }
 
 
@@ -599,14 +601,14 @@ a.list-group-item.active:focus {
 
 .btn-light {
     color: #e2e8f0 !important;
-    background-color: #334155 !important;
-    border-color: #475569 !important;
+    background-color: #42038d !important;
+    border-color: #b54ae5 !important;
 }
 
 .btn-light:hover {
     color: #f1f5f9 !important;
-    background-color: #475569 !important;
-    border-color: #475569 !important;
+    background-color: #5703bf !important;
+    border-color: #cc81ef !important;
 }
 
 .btn-light:disabled, .btn-light.disabled {
