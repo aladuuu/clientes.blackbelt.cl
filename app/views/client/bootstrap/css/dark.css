@@ -20,12 +20,13 @@ html, body {
   background-color: var(--bb-bg) !important;
   color: var(--bb-text);
 }
-
-a,
+/* Link color */
+a, a:hover {
+  color: #8b5cf6 !important;
+}
 a:visited {
   color: #8b5cf6 !important;
 }
-a:hover,
 a:focus {
   color: #c4b5fd !important;
 }
