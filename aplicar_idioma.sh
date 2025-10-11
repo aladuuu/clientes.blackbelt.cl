@@ -4,15 +4,17 @@ set -euo pipefail
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 BASE_DIR=$(cd -- "$SCRIPT_DIR/../.." && pwd)
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+BACKUP_ROOT="$SCRIPT_DIR/../backups"
+BACKUP_BASE="$BACKUP_ROOT/$TIMESTAMP"
 LANG_DIR="$BASE_DIR/language/es_es"
 NEW_LANG_DIR="$SCRIPT_DIR/language/es_es"
-LANG_BACKUP_DIR="$BASE_DIR/language/backup_$TIMESTAMP"
+LANG_BACKUP_DIR="$BACKUP_BASE/language"
 COMPONENTS_DIR="$BASE_DIR/components"
 NEW_COMPONENTS_DIR="$SCRIPT_DIR/components"
-COMPONENTS_BACKUP_DIR="$BASE_DIR/components/backup_$TIMESTAMP"
+COMPONENTS_BACKUP_DIR="$BACKUP_BASE/components"
 APP_DIR="$BASE_DIR/app"
 NEW_APP_DIR="$SCRIPT_DIR/app"
-APP_BACKUP_DIR="$BASE_DIR/app/backup_$TIMESTAMP"
+APP_BACKUP_DIR="$BACKUP_BASE/app"
 CACHE_DIR="$BASE_DIR/cache"
 
 if [[ ! -f "$BASE_DIR/config/blesta.php" ]]; then
@@ -51,6 +53,7 @@ if [[ ! -d "$NEW_APP_DIR" ]]; then
 fi
 
 echo "Base de instalación: $BASE_DIR"
+mkdir -p "$BACKUP_BASE"
 echo "Creando copia de seguridad de idiomas en '$LANG_BACKUP_DIR'..."
 mkdir -p "$LANG_BACKUP_DIR"
 cp -a "$LANG_DIR/." "$LANG_BACKUP_DIR/"
