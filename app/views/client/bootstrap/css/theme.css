@@ -16,14 +16,14 @@ html {
 
 /* Link color */
 a, a:hover {
-    color: #a78bfa;
+    color: #6349f3;
     text-decoration: none;
     position: relative;
     transition: all 0.3s ease;
 }
 
 a:hover {
-    color: #c4b5fd;
+    color: #a591f8;
     transform: translateY(-1px);
 }
 
