@@ -48,7 +48,7 @@ div.pagination ul.pagination li.active a {
 
 /* Header style */
 .header {
-    background: #1e1e2e;
+    background: #000000 !important;
     background: -webkit-gradient(linear, 0 0, 0 bottom, from(#1e1e2e), to(#16161f));
     background: -webkit-linear-gradient(#1e1e2e, #16161f);
     background: -moz-linear-gradient(#1e1e2e, #16161f);
