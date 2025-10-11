@@ -49,13 +49,6 @@ div.pagination ul.pagination li.active a {
 /* Header style */
 .header {
     background: #000000 !important;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#1e1e2e), to(#16161f));
-    background: -webkit-linear-gradient(#1e1e2e, #16161f);
-    background: -moz-linear-gradient(#1e1e2e, #16161f);
-    background: -ms-linear-gradient(#1e1e2e, #16161f);
-    background: -o-linear-gradient(#1e1e2e, #16161f);
-    background: linear-gradient(#1e1e2e, #16161f);
-    -pie-background: linear-gradient(#1e1e2e, #16161f);
 }
 
 /* Title style */
