@@ -1,6 +1,6 @@
 /* Body background */
 body {
-    background-color: theme_page_background_color;
+    background-color: theme_page_background_color!important;
 }
 
 /* Link color */
@@ -496,4 +496,8 @@ a.list-group-item.active:focus {
     color: theme_light_alert_text_color;
     background: theme_light_alert_background_color;
     border-color: theme_light_alert_border_color;
+}
+
+label {
+    color: white !important;
 }
