@@ -721,3 +721,7 @@ input:focus, textarea:focus, select:focus {
 .footer p {
     color: #adc5e8 !important;
 }
+
+.logo img.blesta {
+    height: 50px !important;
+}
