@@ -27,21 +27,6 @@ a:hover {
     transform: translateY(-1px);
 }
 
-a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -2px;
-    left: 0;
-    background-color: #a78bfa;
-    transition: width 0.3s ease;
-}
-
-a:hover::after {
-    width: 100%;
-}
-
 /* Pagination style */
 .pagination .page-item.active .page-link,
 div.pagination ul.pagination li.active .page-link,
