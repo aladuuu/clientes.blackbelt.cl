@@ -79,12 +79,6 @@ div.pagination ul.pagination li.active a {
     -pie-background: linear-gradient(#1a1a26, #12121a);
 }
 
-.nav-content nav.navbar .navbar-nav > .active > a,
-nav.navbar .navbar-nav > .active > a:hover,
-nav.navbar .navbar-nav > .active > a:focus {
-    color: #551ee0 !important;
-}
-
 .nav-content nav.navbar .navbar-nav > li > a {
     color: #a1a1b5 !important;
 }
