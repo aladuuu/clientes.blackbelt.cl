@@ -69,7 +69,7 @@ div.pagination ul.pagination li.active a {
 
 /* Navigation bar style */
 .nav-content nav.navbar {
-    background: #1a1a26;
+    background: #000000 !important;
     background: -webkit-gradient(linear, 0 0, 0 bottom, from(#1a1a26), to(#12121a));
     background: -webkit-linear-gradient(#1a1a26, #12121a);
     background: -moz-linear-gradient(#1a1a26, #12121a);
