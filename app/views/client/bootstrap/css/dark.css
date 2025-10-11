@@ -7,10 +7,10 @@
 */
 
 :root {
-  --bb-bg: #121212;
+  --bb-bg: #111111;
   --bb-surface: #1e1e1e;
-  --bb-surface-2: #242424;
-  --bb-border: #2a2a2a;
+  --bb-surface-2: #323232;
+  --bb-border: #612b7c;
   --bb-text: #e0e0e0;
   --bb-text-muted: #b0b0b0;
 }
@@ -19,6 +19,15 @@
 html, body {
   background-color: var(--bb-bg) !important;
   color: var(--bb-text);
+}
+
+a,
+a:visited {
+  color: #8b5cf6 !important;
+}
+a:hover,
+a:focus {
+  color: #c4b5fd !important;
 }
 
 hr { border-color: var(--bb-border); }
@@ -127,4 +136,3 @@ pre, code, .pre, .code { background-color: #0f0f0f; color: #f0f0f0; }
 /* Pagination */
 .pagination .page-item .page-link { background-color: var(--bb-surface); border-color: var(--bb-border); color: var(--bb-text); }
 .pagination .page-item .page-link:hover { background-color: var(--bb-surface-2); color: var(--bb-text); }
-
