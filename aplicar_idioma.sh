@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Este script siempre vive en BASE_DIR/nuevos-idiomas
-SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
-BASE_DIR=$(cd -- "$SCRIPT_DIR/.." && pwd)
+# Este script SIEMPRE vive en BASE_DIR/nuevos-idiomas
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd -P)"
+if [[ "$(basename -- "$SCRIPT_DIR")" != "nuevos-idiomas" ]]; then
+  echo "Error: este script debe estar en BASE_DIR/nuevos-idiomas" >&2
+  exit 2
+fi
+
+BASE_DIR="$(cd -P -- "$SCRIPT_DIR/.." && pwd -P)"
 REPO_URL="https://github.com/aladuuu/clientes.blackbelt.cl.git"
 STAGE="$SCRIPT_DIR/.origen"
 
@@ -12,7 +17,7 @@ STAGE="$SCRIPT_DIR/.origen"
 command -v git >/dev/null 2>&1 || { echo "Error: git no está instalado." >&2; exit 1; }
 
 # Clonar repo espejo dentro de 'nuevos-idiomas' (subcarpeta oculta)
-rm -rf "$STAGE"
+rm -rf -- "$STAGE"
 git clone --depth 1 "$REPO_URL" "$STAGE"
 
 # Prechequeo: NO crear directorios nuevos; si falta alguno, abortar
@@ -29,7 +34,7 @@ done < <(find "$STAGE" -type f -not -path '*/.git/*' -print0)
 while IFS= read -r -d '' src; do
   rel="${src#"$STAGE/"}"
   dest="$BASE_DIR/$rel"
-  cp -p "$src" "$dest"
+  cp -p -- "$src" "$dest"
 done < <(find "$STAGE" -type f -not -path '*/.git/*' -print0)
 
 echo "Aplicación completada desde '$STAGE' a '$BASE_DIR'."
