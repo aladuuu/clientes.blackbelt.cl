@@ -717,3 +717,7 @@ input:focus, textarea:focus, select:focus {
     background-size: 200px 100%;
     animation: skeleton-loading 1.5s ease-in-out infinite;
 }
+
+.footer p {
+    color: #adc5e8 !important;
+}
