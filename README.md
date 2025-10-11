@@ -60,26 +60,37 @@ La personalización del idioma español en Blesta se encuentra principalmente en
 Para facilitar la aplicación de los cambios de idioma, se incluye un script de automatización:
 
 ```bash
+```bash
 #!/bin/bash
 
-# Directorio de idiomas de Blesta
-LANG_DIR="/language/es_es"
+# Directorio base (directorio actual donde está instalado Blesta)
+BASE_DIR="../../"
+BACKUP_DIR="$BASE_DIR/language/backup_$(date +%Y%m%d_%H%M%S)"
 
-# Verifica si el directorio existe
-if [ ! -d "$LANG_DIR" ]; then
-    echo "Error: Directorio de idiomas no encontrado"
+# Verifica si el directorio de idiomas existe en el sistema
+if [ ! -d "$BASE_DIR/language/es_es" ]; then
+    echo "Error: Directorio de idiomas no encontrado en la instalación de Blesta"
     exit 1
 fi
 
-# Copia los archivos de idioma
-echo "Aplicando cambios de idioma..."
-cp -R ./language/es_es/* /ruta/a/blesta/language/es_es/
+# Crea backup de los archivos existentes
+echo "Creando copia de seguridad..."
+mkdir -p "$BACKUP_DIR"
+cp -R "$BASE_DIR/language/es_es/"* "$BACKUP_DIR/"
+echo "Backup creado en: $BACKUP_DIR"
 
-# Limpia la caché
-echo "Limpiando caché..."
-rm -rf /ruta/a/blesta/cache/*
+# Copia los archivos de idioma nuevos
+echo "Aplicando cambios de idioma..."
+cp -R language/es_es/* "$BASE_DIR/language/es_es/"
+
+# Limpia la caché si existe
+if [ -d "$BASE_DIR/cache" ]; then
+    echo "Limpiando caché..."
+    rm -rf "$BASE_DIR/cache/"*
+fi
 
 echo "¡Cambios aplicados exitosamente!"
+echo "Si necesitas revertir los cambios, los archivos originales están en: $BACKUP_DIR"```
 ```
 
 ### Uso del Script
@@ -91,14 +102,43 @@ echo "¡Cambios aplicados exitosamente!"
 ### Comando de Ejemplo
 
 ```bash
-sudo ./aplicar_idioma.sh --path=/var/www/html/blesta --backup=true --verbose
+# Comando todo-en-uno para actualizar idiomas
+mkdir -p nuevos-idiomas && \
+cd nuevos-idiomas && \
+git clone https://github.com/aladuuu/clientes.blackbelt.cl.git && \
+cd .. && \
+./nuevos-idiomas/clientes.blackbelt.cl/aplicar_idioma.sh
 ```
 
-Este comando:
+Este comando ejecuta la siguiente secuencia:
 
-- Ejecuta el script con privilegios de administrador
-- Especifica la ruta de instalación de Blesta
-- Crea una copia de seguridad antes de aplicar los cambios
-- Muestra información detallada durante la ejecución
+1. Crea una carpeta temporal `nuevos-idiomas`
+2. Entra a la carpeta temporal
+3. Clona el repositorio dentro de ella
+4. Vuelve al directorio raíz
+5. Ejecuta el script que realizará:
+   - Backup de archivos existentes
+   - Reemplazo directo de archivos de idioma
+   - Limpieza de caché
+
+El script detectará automáticamente:
+
+- La ubicación del directorio raíz
+- La estructura de carpetas necesaria
+- Los archivos a reemplazar
+- La ubicación correcta para el backup
+
+Estructura de directorios:
+
+```plaintext
+/directorio-raiz/           # Directorio actual
+├── language/              # Carpetas originales
+│   └── es_es/
+├── nuevos-idiomas/       # Carpeta temporal
+│   └── clientes.blackbelt.cl/
+│       └── language/
+│           └── es_es/
+└── cache/                # Caché de Blesta
+```
 
 Nota: Asegúrate de modificar las rutas según tu instalación de Blesta.
