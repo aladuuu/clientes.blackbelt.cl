@@ -60,7 +60,6 @@ La personalización del idioma español en Blesta se encuentra principalmente en
 Para facilitar la aplicación de los cambios de idioma, se incluye un script de automatización:
 
 ```bash
-```bash
 #!/bin/bash
 
 # Directorio base (directorio actual donde está instalado Blesta)
@@ -90,7 +89,7 @@ if [ -d "$BASE_DIR/cache" ]; then
 fi
 
 echo "¡Cambios aplicados exitosamente!"
-echo "Si necesitas revertir los cambios, los archivos originales están en: $BACKUP_DIR"```
+echo "Si necesitas revertir los cambios, los archivos originales están en: $BACKUP_DIR"
 ```
 
 ### Uso del Script
