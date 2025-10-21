@@ -303,7 +303,7 @@ $html_lang = (!empty($language) ? substr($language, 0, 2) : 'en');
                 ?>
             </div>
 
-            <div class="container-fluid">
+            <div>
                 <footer class="custom-footer bg-dark text-light py-5">
                     <div class="container">
                         <div class="row g-4">
