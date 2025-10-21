@@ -497,3 +497,7 @@ a.list-group-item.active:focus {
     background: theme_light_alert_background_color;
     border-color: theme_light_alert_border_color;
 }
+
+label[for="login_username"] {
+    color: white;
+}
