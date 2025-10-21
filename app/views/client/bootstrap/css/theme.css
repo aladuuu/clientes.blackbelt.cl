@@ -503,3 +503,11 @@ label[for="login_password"],
 label[for="login_remember_me"] {
     color: white;
 }
+
+body.plugin-orderclient-main-packages .section-title h3 {
+    color: white;
+}
+
+body.plugin-orderclient-main-packages .section-title p.format {
+    color: white;
+}
