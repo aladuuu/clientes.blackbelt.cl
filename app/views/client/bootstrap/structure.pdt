@@ -311,7 +311,7 @@ $html_lang = (!empty($language) ? substr($language, 0, 2) : 'en');
                         <div class="col-lg-4 col-md-6">
                             <div class="custom-footer__brand">
                             <div class="custom-footer__logo mb-3">
-                                <img src="<?php echo $this->view_dir;?>images/logo.png" alt="Mi Brand Logo" class="custom-footer__logo-img">
+                                <img src="<?php echo $this->view_dir;?>images/iso.png" alt="Mi Brand Logo" class="custom-footer__logo-img">
                             </div>
                             </div>
                         </div>
