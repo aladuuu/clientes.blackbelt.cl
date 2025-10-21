@@ -497,7 +497,3 @@ a.list-group-item.active:focus {
     background: theme_light_alert_background_color;
     border-color: theme_light_alert_border_color;
 }
-
-label {
-    color: white !important;
-}
