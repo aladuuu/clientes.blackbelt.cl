@@ -594,18 +594,6 @@ body.plugin-orderclient-main-packages .section-title p.format {
   display: inline-block;
 }
 
-.custom-footer__link::before {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #a855f7;
-  transition: width 0.3s ease;
-  box-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
-}
-
 .custom-footer__link:hover {
   color: #a855f7;
   padding-left: 5px;
