@@ -1,7 +1,7 @@
 /* Body background */
 body {
     background-color: theme_page_background_color!important;
-    font-family: 'Roboto', sans-serif!important;
+    font-family: "Space Mono", monospace!important;
 }
 
 /* Link color */
