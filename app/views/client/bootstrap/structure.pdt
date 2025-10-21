@@ -303,86 +303,85 @@ $html_lang = (!empty($language) ? substr($language, 0, 2) : 'en');
                 ?>
             </div>
 
-            <div>
+            <div class="mt-5">
+                <footer class="custom-footer text-light py-5">
+                    <div class="container">
+                        <div class="row g-4">
+                        <!-- Logo y descripción -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="custom-footer__brand">
+                            <h3 class="custom-footer__logo mb-3">
+                                <span class="custom-footer__logo-text">Mi</span><span class="custom-footer__logo-accent">Brand</span>
+                            </h3>
+                            <p class="custom-footer__description">
+                                Creando experiencias digitales excepcionales con pasión y dedicación. Tu éxito es nuestra misión.
+                            </p>
+                            </div>
+                        </div>
 
-            <footer class="custom-footer text-light py-5">
-                <div class="container">
-                    <div class="row g-4">
-                    <!-- Logo y descripción -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="custom-footer__brand">
-                        <h3 class="custom-footer__logo mb-3">
-                            <span class="custom-footer__logo-text">Mi</span><span class="custom-footer__logo-accent">Brand</span>
-                        </h3>
-                        <p class="custom-footer__description">
-                            Creando experiencias digitales excepcionales con pasión y dedicación. Tu éxito es nuestra misión.
-                        </p>
+                        <!-- Links rápidos -->
+                        <div class="col-lg-2 col-md-6 col-6">
+                            <h5 class="custom-footer__title mb-3">Empresa</h5>
+                            <ul class="custom-footer__links list-unstyled">
+                            <li><a href="#" class="custom-footer__link">Inicio</a></li>
+                            <li><a href="#" class="custom-footer__link">Nosotros</a></li>
+                            <li><a href="#" class="custom-footer__link">Servicios</a></li>
+                            <li><a href="#" class="custom-footer__link">Portfolio</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 col-6">
+                            <h5 class="custom-footer__title mb-3">Recursos</h5>
+                            <ul class="custom-footer__links list-unstyled">
+                            <li><a href="#" class="custom-footer__link">Blog</a></li>
+                            <li><a href="#" class="custom-footer__link">FAQ</a></li>
+                            <li><a href="#" class="custom-footer__link">Soporte</a></li>
+                            <li><a href="#" class="custom-footer__link">Contacto</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Redes sociales -->
+                        <div class="col-lg-4 col-md-6">
+                            <h5 class="custom-footer__title mb-3">Síguenos</h5>
+                            <p class="custom-footer__subtitle mb-3">Conecta con nosotros en redes sociales</p>
+                            <div class="custom-footer__social">
+                            <a href="#" class="custom-footer__social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="custom-footer__social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="custom-footer__social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="custom-footer__social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="custom-footer__social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Bottom bar -->
+                        <hr class="custom-footer__divider my-4">
+                        <div class="row align-items-center">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            <p class="custom-footer__copyright mb-0">
+                            &copy; 2025 MiBrand. Todos los derechos reservados.
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <a href="#" class="custom-footer__legal-link">Privacidad</a>
+                            <span class="custom-footer__separator mx-2">|</span>
+                            <a href="#" class="custom-footer__legal-link">Términos</a>
+                            <span class="custom-footer__separator mx-2">|</span>
+                            <a href="#" class="custom-footer__legal-link">Cookies</a>
+                        </div>
                         </div>
                     </div>
-
-                    <!-- Links rápidos -->
-                    <div class="col-lg-2 col-md-6 col-6">
-                        <h5 class="custom-footer__title mb-3">Empresa</h5>
-                        <ul class="custom-footer__links list-unstyled">
-                        <li><a href="#" class="custom-footer__link">Inicio</a></li>
-                        <li><a href="#" class="custom-footer__link">Nosotros</a></li>
-                        <li><a href="#" class="custom-footer__link">Servicios</a></li>
-                        <li><a href="#" class="custom-footer__link">Portfolio</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 col-6">
-                        <h5 class="custom-footer__title mb-3">Recursos</h5>
-                        <ul class="custom-footer__links list-unstyled">
-                        <li><a href="#" class="custom-footer__link">Blog</a></li>
-                        <li><a href="#" class="custom-footer__link">FAQ</a></li>
-                        <li><a href="#" class="custom-footer__link">Soporte</a></li>
-                        <li><a href="#" class="custom-footer__link">Contacto</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Redes sociales -->
-                    <div class="col-lg-4 col-md-6">
-                        <h5 class="custom-footer__title mb-3">Síguenos</h5>
-                        <p class="custom-footer__subtitle mb-3">Conecta con nosotros en redes sociales</p>
-                        <div class="custom-footer__social">
-                        <a href="#" class="custom-footer__social-link" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="custom-footer__social-link" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="custom-footer__social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="custom-footer__social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="custom-footer__social-link" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        </div>
-                    </div>
-                    </div>
-
-                    <!-- Bottom bar -->
-                    <hr class="custom-footer__divider my-4">
-                    <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <p class="custom-footer__copyright mb-0">
-                        &copy; 2025 MiBrand. Todos los derechos reservados.
-                        </p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <a href="#" class="custom-footer__legal-link">Privacidad</a>
-                        <span class="custom-footer__separator mx-2">|</span>
-                        <a href="#" class="custom-footer__legal-link">Términos</a>
-                        <span class="custom-footer__separator mx-2">|</span>
-                        <a href="#" class="custom-footer__legal-link">Cookies</a>
-                    </div>
-                    </div>
-                </div>
-            </footer>
+                </footer>
             </div>
         </div>
 
