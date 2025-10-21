@@ -16,6 +16,9 @@ APP_DIR="$BASE_DIR/app"
 NEW_APP_DIR="$SCRIPT_DIR/app"
 APP_BACKUP_DIR="$BACKUP_BASE/app"
 CACHE_DIR="$BASE_DIR/cache"
+PLUGINS_DIR="$BASE_DIR/plugins"
+NEW_PLUGINS_DIR="$SCRIPT_DIR/plugins"
+PLUGINS_BACKUP_DIR="$BACKUP_BASE/plugins"
 
 if [[ ! -f "$BASE_DIR/config/blesta.php" ]]; then
     echo "Error: No se detecta una instalación de Blesta en '$BASE_DIR'" >&2
@@ -52,6 +55,16 @@ if [[ ! -d "$NEW_APP_DIR" ]]; then
     exit 1
 fi
 
+if [[ ! -d "$PLUGINS_DIR" ]]; then
+    echo "Error: Directorio de plugins no encontrado en '$PLUGINS_DIR'" >&2
+    exit 1
+fi
+
+if [[ ! -d "$NEW_PLUGINS_DIR" ]]; then
+    echo "Error: Directorio de nuevos plugins no encontrado en '$NEW_PLUGINS_DIR'" >&2
+    exit 1
+fi
+
 echo "Base de instalación: $BASE_DIR"
 mkdir -p "$BACKUP_BASE"
 echo "Creando copia de seguridad de idiomas en '$LANG_BACKUP_DIR'..."
@@ -81,6 +94,15 @@ echo "Actualizando app..."
 cp -a "$NEW_APP_DIR/." "$APP_DIR/"
 echo "App actualizada."
 
+echo "Creando copia de seguridad de plugins en '$PLUGINS_BACKUP_DIR'..."
+mkdir -p "$PLUGINS_BACKUP_DIR"
+cp -a "$PLUGINS_DIR/." "$PLUGINS_BACKUP_DIR/"
+echo "Backup de plugins creado."
+
+echo "Actualizando plugins..."
+cp -a "$NEW_PLUGINS_DIR/." "$PLUGINS_DIR/"
+echo "Plugins actualizados."
+
 if [[ -d "$CACHE_DIR" ]]; then
     echo "Limpiando caché en '$CACHE_DIR'..."
     find "$CACHE_DIR" -mindepth 1 -maxdepth 1 -exec rm -rf {} +
@@ -90,4 +112,4 @@ else
 fi
 
 echo "¡Cambios aplicados exitosamente!"
-echo "Si necesitas revertir los cambios, revisa los respaldos en: $LANG_BACKUP_DIR, $COMPONENTS_BACKUP_DIR, $APP_BACKUP_DIR"
+echo "Si necesitas revertir los cambios, revisa los respaldos en: $LANG_BACKUP_DIR, $COMPONENTS_BACKUP_DIR, $APP_BACKUP_DIR, $PLUGINS_BACKUP_DIR"
