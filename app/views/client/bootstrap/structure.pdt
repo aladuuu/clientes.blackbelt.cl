@@ -313,9 +313,6 @@ $html_lang = (!empty($language) ? substr($language, 0, 2) : 'en');
                             <div class="custom-footer__logo mb-3">
                                 <img src="<?php echo $this->view_dir;?>images/logo.png" alt="Mi Brand Logo" class="custom-footer__logo-img">
                             </div>
-                            <p class="custom-footer__description">
-                                Creando experiencias digitales excepcionales con pasión y dedicación. Tu éxito es nuestra misión.
-                            </p>
                             </div>
                         </div>
 
