@@ -325,7 +325,7 @@ $html_lang = (!empty($language) ? substr($language, 0, 2) : 'en');
                     <div class="modal-body">
                         <i class="fas fa-spinner fa-spin"></i>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer">lala
                     </div>
                 </div>
             </div>
