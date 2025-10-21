@@ -689,3 +689,14 @@ body.plugin-orderclient-main-packages .section-title p.format {
     font-size: 1.5rem;
   }
 }
+
+.custom-footer__logo {
+    text-align: center;
+}
+
+.custom-footer__logo-img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
