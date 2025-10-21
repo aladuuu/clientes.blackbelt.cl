@@ -341,7 +341,7 @@ $html_lang = (!empty($language) ? substr($language, 0, 2) : 'en');
                             <p class="custom-footer__subtitle mb-3">Conecta con nosotros en redes sociales</p>
                             <div class="custom-footer__social">
                             <a href="https://www.youtube.com/@BLACKBELTCL" class="custom-footer__social-link" aria-label="Facebook">
-                                <i class="fab fa-youtube-f"></i>
+                                <i class="fab fa-youtube"></i>
                             </a>
                             <a href="https://www.instagram.com/blackbeltcl/" class="custom-footer__social-link" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
