@@ -321,22 +321,21 @@ $html_lang = (!empty($language) ? substr($language, 0, 2) : 'en');
 
                         <!-- Links rápidos -->
                         <div class="col-lg-2 col-md-6 col-6">
-                            <h5 class="custom-footer__title mb-3">Empresa</h5>
+                            <h5 class="custom-footer__title mb-3">Links</h5>
                             <ul class="custom-footer__links list-unstyled">
-                            <li><a href="#" class="custom-footer__link">Inicio</a></li>
-                            <li><a href="#" class="custom-footer__link">Nosotros</a></li>
-                            <li><a href="#" class="custom-footer__link">Servicios</a></li>
-                            <li><a href="#" class="custom-footer__link">Portfolio</a></li>
+                            <li><a href="https://clientes.blackbelt.cl/client" class="custom-footer__link">Inicio</a></li>
+                            <li><a href="https://clientes.blackbelt.cl/client/services/index/" class="custom-footer__link">Servicios</a></li>
+                            <li><a href="https://clientes.blackbelt.cl/order" class="custom-footer__link">Tienda</a></li>
                             </ul>
                         </div>
 
                         <div class="col-lg-2 col-md-6 col-6">
                             <h5 class="custom-footer__title mb-3">Recursos</h5>
                             <ul class="custom-footer__links list-unstyled">
-                            <li><a href="#" class="custom-footer__link">Blog</a></li>
-                            <li><a href="#" class="custom-footer__link">FAQ</a></li>
-                            <li><a href="#" class="custom-footer__link">Soporte</a></li>
-                            <li><a href="#" class="custom-footer__link">Contacto</a></li>
+                            <li><a href="https://wiki.blackbelt.cl/" class="custom-footer__link">Wiki</a></li>
+                            <li><a href="https://status.blackbelt.cl/" class="custom-footer__link">Status</a></li>
+                            <li><a href="https://blackbelt.cl/contacto" class="custom-footer__link">Soporte</a></li>
+                            <li><a href="https://blackbelt.cl/contacto" class="custom-footer__link">Contacto</a></li>
                             </ul>
                         </div>
 
@@ -345,17 +344,11 @@ $html_lang = (!empty($language) ? substr($language, 0, 2) : 'en');
                             <h5 class="custom-footer__title mb-3">Síguenos</h5>
                             <p class="custom-footer__subtitle mb-3">Conecta con nosotros en redes sociales</p>
                             <div class="custom-footer__social">
-                            <a href="#" class="custom-footer__social-link" aria-label="Facebook">
-                                <i class="fab fa-facebook-f"></i>
+                            <a href="https://www.youtube.com/@BLACKBELTCL" class="custom-footer__social-link" aria-label="Facebook">
+                                <i class="fab fa-youtube-f"></i>
                             </a>
-                            <a href="#" class="custom-footer__social-link" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="custom-footer__social-link" aria-label="Instagram">
+                            <a href="https://www.instagram.com/blackbeltcl/" class="custom-footer__social-link" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="custom-footer__social-link" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
                             </a>
                             <a href="#" class="custom-footer__social-link" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
@@ -369,13 +362,13 @@ $html_lang = (!empty($language) ? substr($language, 0, 2) : 'en');
                         <div class="row align-items-center">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                             <p class="custom-footer__copyright mb-0">
-                            &copy; 2025 MiBrand. Todos los derechos reservados.
+                            &copy; 2025 BLACKBELT PRODUCCIONES SPA.
                             </p>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
-                            <a href="#" class="custom-footer__legal-link">Privacidad</a>
+                            <a href="https://clientes.blackbelt.cl/tos" class="custom-footer__legal-link">Términos</a>
                             <span class="custom-footer__separator mx-2">|</span>
-                            <a href="#" class="custom-footer__legal-link">Términos</a>
+                            <a href="https://clientes.blackbelt.cl/aup" class="custom-footer__legal-link">Política Uso</a>
                             <span class="custom-footer__separator mx-2">|</span>
                             <a href="#" class="custom-footer__legal-link">Cookies</a>
                         </div>
