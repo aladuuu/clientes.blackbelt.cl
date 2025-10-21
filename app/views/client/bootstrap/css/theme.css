@@ -631,7 +631,7 @@ body.plugin-orderclient-main-packages .section-title p.format {
   border: 2px solid rgba(168, 85, 247, 0.3);
   border-radius: 50%;
   color: #a855f7;
-  text-decoration: none;
+  text-decoration: none!important;
   transition: all 0.3s ease;
   font-size: 1.1rem;
 }
