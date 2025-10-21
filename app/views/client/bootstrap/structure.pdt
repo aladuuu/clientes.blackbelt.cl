@@ -304,7 +304,7 @@ $html_lang = (!empty($language) ? substr($language, 0, 2) : 'en');
             </div>
 
             <div class="mt-5">
-                <footer class="custom-footer text-light pt-5">
+                <footer class="custom-footer text-light pt-5 pb-2">
                     <div class="container">
                         <div class="row g-4">
                         <!-- Logo y descripción -->
