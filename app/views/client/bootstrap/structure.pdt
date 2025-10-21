@@ -310,9 +310,9 @@ $html_lang = (!empty($language) ? substr($language, 0, 2) : 'en');
                         <!-- Logo y descripción -->
                         <div class="col-lg-4 col-md-6">
                             <div class="custom-footer__brand">
-                            <h3 class="custom-footer__logo mb-3">
-                                <span class="custom-footer__logo-text">Mi</span><span class="custom-footer__logo-accent">Brand</span>
-                            </h3>
+                            <div class="custom-footer__logo mb-3">
+                                <img src="<?php echo $this->view_dir;?>images/logo.png" alt="Mi Brand Logo" class="custom-footer__logo-img">
+                            </div>
                             <p class="custom-footer__description">
                                 Creando experiencias digitales excepcionales con pasión y dedicación. Tu éxito es nuestra misión.
                             </p>
@@ -334,7 +334,6 @@ $html_lang = (!empty($language) ? substr($language, 0, 2) : 'en');
                             <ul class="custom-footer__links list-unstyled">
                             <li><a href="https://wiki.blackbelt.cl/" class="custom-footer__link">Wiki</a></li>
                             <li><a href="https://status.blackbelt.cl/" class="custom-footer__link">Status</a></li>
-                            <li><a href="https://blackbelt.cl/contacto" class="custom-footer__link">Soporte</a></li>
                             <li><a href="https://blackbelt.cl/contacto" class="custom-footer__link">Contacto</a></li>
                             </ul>
                         </div>
