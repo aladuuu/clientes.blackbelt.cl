@@ -515,7 +515,6 @@ body.plugin-orderclient-main-packages .section-title p.format {
 
 /* Custom Footer Styles */
 .custom-footer {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   position: relative;
   overflow: hidden;
 }
