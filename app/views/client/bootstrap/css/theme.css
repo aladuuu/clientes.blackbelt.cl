@@ -664,11 +664,6 @@ body.plugin-orderclient-main-packages .section-title p.format {
     padding: 2rem 0 !important;
   }
   
-  .custom-footer__title::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
   .custom-footer__social {
     justify-content: center;
   }
