@@ -10,7 +10,9 @@ body {
 .card.bg-light,
 .card-order,
 .package,
-.package-list {
+.package-list,
+.well,
+.modal-content {
     color: #212529;
 }
 
