@@ -1,6 +1,8 @@
 /* Body background */
 body {
     background-color: theme_page_background_color!important;
+    /* The configured page background is dark; do not inherit Bootstrap's muted gray. */
+    color: #f2f2f2;
     font-family: "Space Mono", monospace!important;
 }
 
