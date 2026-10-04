@@ -16,6 +16,11 @@ body {
     color: #212529;
 }
 
+/* Widget cards are transparent on the dark page background. */
+.card-blesta {
+    color: #f2f2f2;
+}
+
 /* Link color */
 a, a:hover {
     color: theme_link_color;
