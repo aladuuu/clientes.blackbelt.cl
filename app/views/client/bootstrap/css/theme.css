@@ -16,9 +16,10 @@ body {
     color: #212529;
 }
 
-/* Widget cards are transparent on the dark page background. */
-.card-blesta {
-    color: #f2f2f2;
+/* Widget bodies are white; their headers keep the configured dark-theme colors. */
+.card-blesta > .card-body,
+.card-blesta > .panel-body {
+    color: #212529;
 }
 
 /* Link color */
