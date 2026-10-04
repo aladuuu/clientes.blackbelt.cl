@@ -6,19 +6,22 @@ body {
     font-family: "Space Mono", monospace!important;
 }
 
-/* Keep the default dark text inside light order cards and other white surfaces. */
-.card.bg-light,
+/*
+ * The client area uses a dark page canvas, so body text is light.  Bootstrap
+ * components below paint their own light backgrounds and otherwise inherit
+ * that body color.  Set the foreground at the light-surface boundary rather
+ * than per view so account, invoice, payment and dialog screens stay legible.
+ */
+.card,
 .card-order,
 .package,
 .package-list,
 .well,
-.modal-content {
-    color: #212529;
-}
-
-/* Widget bodies are white; their headers keep the configured dark-theme colors. */
-.card-blesta > .card-body,
-.card-blesta > .panel-body {
+.modal-content,
+.popover,
+.list-group-item:not(.active),
+.panel-blesta > .panel-body,
+.panel-blesta > .panel-footer {
     color: #212529;
 }
 
