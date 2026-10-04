@@ -25,6 +25,11 @@ body {
     color: #212529;
 }
 
+/* The order plugin makes this payment card transparent by default. */
+body.plugin-orderclient-checkout-index .card.card-order {
+    background-color: #fff !important;
+}
+
 /* Link color */
 a, a:hover {
     color: theme_link_color;
